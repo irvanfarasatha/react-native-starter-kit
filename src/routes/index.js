@@ -4,7 +4,7 @@ import { Icon } from 'native-base';
 import DefaultProps from '../constants/navigation';
 import AppConfig from '../constants/config';
 
-import { ArticlesForm, ArticlesList, ArticlesSingle } from '../containers';
+import { ArticlesForm, ArticlesList, ArticlesSingle, WebView } from '../containers';
 
 import AboutComponent from '../components/About';
 
@@ -26,7 +26,6 @@ const Index = (
         >
           <Scene key="home" component={AboutComponent} />
         </Stack>
-
         <Stack
           key="articlesList"
           title="Articles List"
@@ -36,14 +35,13 @@ const Index = (
           <Scene key="articlesList" component={ArticlesList} />
           <Scene key="articlesSingle" component={ArticlesSingle} back />
         </Stack>
-
         <Stack
-          key="form"
-          title="Articles Form"
-          icon={() => <Icon name="add" {...DefaultProps.icons} />}
+          key="webView"
+          title="Web View"
+          icon={() => <Icon name="stats-chart" {...DefaultProps.icons} />}
           {...DefaultProps.navbarProps}
         >
-          <Scene key="form" component={ArticlesForm} />
+          <Scene key="webView" component={WebView} />
         </Stack>
       </Tabs>
     </Scene>

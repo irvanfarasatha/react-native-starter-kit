@@ -26,39 +26,7 @@ const ArticlesForm = ({
   }, [register]);
 
   return (
-    <Container>
-      <Content padder>
-        <Header
-          title="Example form"
-          content="When you submit the form, it'll simply save to your redux store"
-        />
-
-        {error && <Messages message={error} />}
-        {loading && <Messages type="info" message="Loading..." />}
-        {success && <Messages type="success" message={success} />}
-
-        <Form>
-          <Item stackedLabel>
-            <Label>Email*</Label>
-            <Input
-              type="text"
-              autoCapitalize="none"
-              placeholder="james@doe.com"
-              keyboardType="email-address"
-              defaultValue={defaultValues.email || ''}
-              onChangeText={(value) => setValue('email', value)}
-            />
-          </Item>
-          {errors.email && <Text>{errors.email.message}</Text>}
-
-          <Spacer size={20} />
-
-          <Button block onPress={handleSubmit(onFormSubmit)} disabled={loading}>
-            <Text>{loading ? 'Loading' : 'Submit'}</Text>
-          </Button>
-        </Form>
-      </Content>
-    </Container>
+    null
   );
 };
 
