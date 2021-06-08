@@ -62,7 +62,7 @@ class ArticlesWebView extends Component {
     } = this.props;
     const { loading, error, page } = this.state;
 
-    return <WebView source={{ uri: 'https://reactnative.dev/' }} />
+    return <WebView source={{ uri: 'https://app.powerbrain.id/public/electricity-monitoring?home-id=farizazmipgmailcom' }} />
   };
 }
 

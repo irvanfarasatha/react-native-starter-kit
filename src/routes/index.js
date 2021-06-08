@@ -4,7 +4,9 @@ import { Icon } from 'native-base';
 import DefaultProps from '../constants/navigation';
 import AppConfig from '../constants/config';
 
-import { ArticlesForm, ArticlesList, ArticlesSingle, WebView } from '../containers';
+import { ArticlesList, ArticlesSingle, WebView } from '../containers';
+import WebviewProfile from '../containers/Profile/View';
+import WebviewElectricityMonitoring from '../containers/ElectricityMonitoring/View';
 
 import AboutComponent from '../components/About';
 
@@ -20,20 +22,20 @@ const Index = (
       >
         <Stack
           key="home"
-          title={AppConfig.appName}
+          title=""
           icon={() => <Icon name="planet" {...DefaultProps.icons} />}
           {...DefaultProps.navbarProps}
         >
-          <Scene key="home" component={AboutComponent} />
+          <Scene key="home" component={WebviewElectricityMonitoring} />
         </Stack>
         <Stack
           key="articlesList"
-          title="Articles List"
+          title=""
           icon={() => <Icon name="list" {...DefaultProps.icons} />}
           {...DefaultProps.navbarProps}
         >
-          <Scene key="articlesList" component={ArticlesList} />
-          <Scene key="articlesSingle" component={ArticlesSingle} back />
+          <Scene key="articlesList" component={WebviewProfile} />
+          {/* <Scene key="articlesSingle" component={ArticlesSingle} back /> */}
         </Stack>
         <Stack
           key="webView"
